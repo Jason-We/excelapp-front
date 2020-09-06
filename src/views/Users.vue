@@ -33,14 +33,14 @@
       },
       created() {
          const that = this;
-         axios.get('http://localhost:8088/user/getAll/').then(function (res) {
+         this.axios.get('http://localhost:8088/user/getAll/').then(function (res) {
             console.log(res.data);
             that.users = res.data;
          })
       },
       methods: {
          addUser() {
-            axios.post('http://localhost:8088/user/add', {
+            this.axios.post('http://localhost:8088/user/add', {
                name: this.name,
                sex: this.sex,
                phone: this.phone,

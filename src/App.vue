@@ -18,21 +18,27 @@
     </v-app-bar>
 
     <v-main>
-      <HelloWorld />
-
+      <!-- <HelloWorld /> -->
+      <!-- TODO  修改-->
+      <v-tabs centered grow>
+        <v-tab to="/">Home</v-tab>
+        <v-tab to="/about">About</v-tab>
+        <v-tab to="/users">Users</v-tab>
+      </v-tabs>
+      <router-view></router-view>
     </v-main>
   </v-app>
 </template>
 
 <script>
-  import HelloWorld from './components/HelloWorld';
+  // import HelloWorld from './components/HelloWorld';
 
   export default {
     name: 'App',
 
-    components: {
-      HelloWorld,
-    },
+    // components: {
+    //   HelloWorld,
+    // },
 
     data: () => ({
       //

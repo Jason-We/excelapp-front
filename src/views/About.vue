@@ -1,3 +1,13 @@
 <template>
-  <v-banner> This is an about page</v-banner>
+  <v-app>
+
+  </v-app>
 </template>
+
+<script>
+  export default {
+    data: () => ({
+
+    }),
+  }
+</script>

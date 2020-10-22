@@ -26,7 +26,7 @@
       },
       created() {
          const that = this;
-         this.axios.get('http://localhost:8088/user/getAll/').then(function (res) {
+         this.axios.get('/user/getAll').then(function (res) {
             console.log(res.data);
             that.users = res.data;
          })
@@ -35,7 +35,7 @@
          deleteOne(u) {
             const that = this;
             if (confirm("You really want to delete this one？")) {
-               this.axios.delete('http://localhost:8088/user/del', {
+               this.axios.delete('/user/del', {
                   params: {
                      name: u
                   }
@@ -53,7 +53,7 @@
          },
          getAllusers() {
             const that = this;
-            this.axios.get('http://localhost:8088/user/getAll/').then(function (res) {
+            this.axios.get('/user/getAll/').then(function (res) {
                console.log(res.data);
                that.users = res.data;
             })
